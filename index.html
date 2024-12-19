@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="letter">
+            <p id="text"></p>
+        </div>
+    </div>
+    <script>
+        const letter = `Hi Gel! Since you’re using your own course, might as well use mine HAHAHAHA. I am not that good at writing; jeez you even saw what kind of penmanship my hands are capable of. Anyway, to start this, I want to appreciate you on how amazing and how you made my life more meaningful, siguro lagi tayong nag kukupalan, nag babardagulan, and kung anu-ano pang kagaguhan. I might not show how I appreciate you but trust me, YOU MEAN A LOT to me, AS IN YOU MEAAAAAN A LOTTTTTTT. I appreciate every inch of you, every flaws and imperfections you have. Hindi ka man nag o-open up about what’s going on inside your head and what type of insecurity you’re facing, but let this message be a reminder that you are a wonderful, ineffable, irreplaceable woman. If you can just see yourself through my eyes, only then you would realize how special you are. 
+I found myself captivated by you—not just by your face, but by the way you exist. The way you care for me is unlike anything I’ve ever known, so tender it feels like sunlight warming the deepest, darkest parts of my soul. You’re both the soothing calm I never realized I craved and the spark that makes me feel alive again. Just being with you has mended pieces of me I thought were broken beyond repair. You’ve reached parts of me I had buried long ago and somehow made them whole. It feels as though I’ve known you across countless lifetimes, that every step and misstep I’ve taken was meant to lead me to you. With you, even the stillness feels sacred, as if the universe pauses to give us just a little more time. You don’t just brighten the world—you give it meaning.`;
+
+        let index = 0;
+        const speed = 50; // Speed of typing effect
+
+        function typeWriter() {
+            if (index < letter.length) {
+                document.getElementById("text").innerHTML += letter.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
+</body>
+</html>
